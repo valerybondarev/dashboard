@@ -1,0 +1,31 @@
+ <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url_for('index') }}">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-passport"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Dashboard</div>
+      </a>
+
+      <!-- Линия -->
+      <hr class="sidebar-divider my-0">
+
+      {% for item in nav_menu %}
+      <li class="nav-item {%- if request.path == item['link'] %} active border-left-warning {% endif %}">
+        <a class="nav-link"  href="{{item['link']}}">
+          <i class="{{item['icon']}}"></i>
+          <span>{{item['title']}}</span></a>
+      </li>
+      {% endfor %}
+
+      <!-- Линия -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Кнопка "скрыть" -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>

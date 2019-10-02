@@ -1,0 +1,10 @@
+.pull-left {
+          width: 60%;
+          float: left;
+          position: absolute;
+          padding: 15px 0 10px 20px;
+      }
+      .pull-left button{
+          margin: 0 10px;
+          z-index:10;
+      }

@@ -1,0 +1,28 @@
+.dashboard-header {
+      padding:20px;
+    }
+    .pull-right{
+      float:right;
+      width:30%;
+    }
+    .pull-right input{
+      float:right;
+      width: 30%;
+    }
+    td div .pull-right .card-body {
+      font-size: 12px;
+      padding: 3px 7px;
+    }
+    td div .pull-right {
+      width:auto;
+      margin: 5px;
+    }
+
+    .table-targets tbody tr td {
+        min-height: 20px;
+        vertical-align: middle;
+    }
+
+    .navbar_button_label {
+        font-size: 0.8rem;
+    }

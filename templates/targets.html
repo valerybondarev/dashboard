@@ -1,0 +1,417 @@
+
+  {% extends "layout.html" %}
+  {% block header %}
+  {% include "header.html" %}
+  {% endblock %}
+
+  {% block content %}
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    {% block nav_menu %}
+    {% include "menu.html" %}
+    {% endblock %}
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+            <div class="form-inline m-t-xs m-b-sm m-l-lg navbar_button_section">
+                <span>
+                    <a href="#" class="btn btn-xs show_modal">
+                        <button class="btn btn-primary btn-sm btn-circle">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <span class="navbar_button_label">
+                            Add targets
+                        </span>
+                    </a>
+                </span>
+<!--                <span data-placement="right" title="" class="portal_tooltip" data-original-title="Please go to the settings page first to add your cloud credentials">-->
+<!--                    <a href="#" class="btn btn-xs">-->
+<!--                        <button class="btn btn-primary btn-circle">-->
+<!--                            <i class="fas fa-cloud"></i>-->
+<!--                        </button> -->
+<!--                        <span class="navbar_button_label">-->
+<!--                            Add Cloud Targets-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                </span>-->
+            </div>
+
+
+
+            <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">7</span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <div class="container-fluid">
+        <div class="card shadow mb-4">
+
+        <!-- Begin Page Content -->
+        <div class="wrapper wrapper-content">
+            <div class="v-spinner" style="margin-top: 50px; display: none;">
+                <div class="v-beat v-beat-odd" style="background-color: rgb(136, 136, 136); height: 15px; width: 15px; margin: 2px; border-radius: 100%;"></div>
+                <div class="v-beat v-beat-even" style="background-color: rgb(136, 136, 136); height: 15px; width: 15px; margin: 2px; border-radius: 100%;"></div>
+                <div class="v-beat v-beat-odd" style="background-color: rgb(136, 136, 136); height: 15px; width: 15px; margin: 2px; border-radius: 100%;"></div>
+            </div>
+            <div class="row white-bg dashboard-header">
+                <div class="col-lg-12">
+                    <div name="Datatable" id="targets-table">
+                        <div class="clearfix" style="margin-bottom: 10px;"><!---->
+                            <span title="" data-container="body" data-html="true" data-placement="top" class="portal_tooltip" data-original-title="Select All">
+                                <a class="btn btn-sm">
+                                    <i class="fas fa-check fa-lg"></i>
+                                </a>
+                            </span>
+                            <span title="" data-container="body" data-html="true" data-placement="top" class="portal_tooltip link-disabled" data-original-title="Delete">
+                                <a class="btn btn-sm disabled">
+                                    <i class="fas fa-trash fa-lg"></i>
+                                </a>
+                            </span>
+                            <span title="" data-container="body" data-html="true" data-placement="top" class="portal_tooltip" data-original-title="Scan Targets">
+                                <a class="btn btn-sm disabled">
+                                    <i class="fas fa-play fa-lg"></i>
+                                </a>
+                            </span>
+                            <span title="" data-container="body" data-html="true" data-placement="top" class="portal_tooltip" data-original-title="Export Targets">
+                                <a href="/test.txt" class="btn btn-sm">
+                                    <i class="fas fa-download fa-lg"></i>
+                                </a>
+                            </span>
+                            <span class="text-muted" style="padding: 5px 10px;">|</span>
+                            <a class="btn btn-sm">
+                                <span class="peity-donut" style="display: none;">1,0,2</span>
+                                <svg class="peity peity-vertical-align" height="18" width="18" data-original-title="" title="">
+                                    <path d="M 9 0 A 9 9 0 0 1 16.794228634059948 13.499999999999998 L 12.897114317029974 11.25 A 4.5 4.5 0 0 0 9 4.5" fill="#1ab394"></path>
+                                    <path d="M 16.794228634059948 13.499999999999998 A 9 9 0 1 1 8.999999999999998 0 L 9 4.5 A 4.5 4.5 0 1 0 12.897114317029974 11.25" fill="#D1DADE"></path>
+                                </svg> <!----></a> <div class="input-group input-group-sm pull-right">
+                                <input type="text" id="SearchTarget" placeholder="Search" class="form-control">
+                            </div>
+                        </div>
+                        <div name="SimpleTable">
+                            <table class="table table-hover table-targets" style="margin-bottom: 0px;">
+                                <colgroup>
+                                    <col style="width: 30px;"> <col><col><col>
+                                </colgroup>
+                                <thead style="display: none;">
+                                <tr>
+                                    <th><input type="checkbox" name="MultiSelect" style="margin: 0px; vertical-align: middle;"></th>
+                                    <th>Address</th>
+                                    <th>Tags</th>
+                                    <th>Issues</th>
+                                    <th>Scan</th>
+                                </tr>
+                                </thead>
+          <tbody>
+          {% for item in items %}
+          <tr>
+            <td><input type="checkbox" class="cbx" name="MultiSelect" style="margin: 0px; vertical-align: middle;" data-id="{{item['target_id']}}"></td>
+            <td>
+              <div>
+                  <div class="targets_table_cloud">
+                      <!---->
+                  </div> <!---->
+                  <span style="padding-left: 14px;">{{item['hostname']}}</span> <!---->
+
+              </div>
+            </td>
+
+              <td><div>
+            <div class="card bg-danger text-white pull-right shadow">
+                    <div class="card-body">
+                        <a style="color:white;" href="/issues?targets={{item['target_id']}}&filter=critical">{{item['critical_issues']}}</a>
+                    </div>
+                  </div>
+            <div class="card bg-warning text-white pull-right shadow">
+                    <div class="card-body">
+                        <a style="color:white;" href="/issues?targets={{item['target_id']}}&filter=high">{{item['high_issues']}}</a>
+                    </div>
+                  </div>
+            <div class="card bg-info text-white pull-right shadow">
+                    <div class="card-body">
+                        <a style="color:white;" href="/issues?targets={{item['target_id']}}&filter=medium">{{item['medium_issues']}}</a>
+                    </div>
+                  </div>
+           <div class="card bg-primary text-white pull-right shadow">
+                    <div class="card-body">
+                        <a style="color:white;" href="/issues?targets={{item['target_id']}}&filter=low">{{item['low_issues']}}</a>
+                    </div>
+                  </div>
+          </div></td>
+              <td>
+                  <span data-id="{{item['target_id']}}" class="scan_target">
+                    <a href="#" class="btn btn-sm">
+                        <button class="btn btn-info btn-sm btn-circle">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <span>
+                            Scan
+                        </span>
+                    </a>
+                </span>
+              </td>
+          </tr>
+          {% endfor %}
+
+          <!----></tbody> <!----></table></div> <!----></div></div></div></div>
+
+      </div>
+
+        <!-- /.container-fluid -->
+        </div>
+
+      </div>
+      <!-- End of Main Content -->
+
+        <div id="target-new-modal" tabindex="-100" role="dialog" aria-hidden="true" class="modal fade inmodal in">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <i class="fas fa-bullseye-pointer modal-icon" style="font-size: 45px;"></i>
+                        <h4 class="modal-title">Add Targets</h4>
+                    </div>
+                    <form role="form" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="target_addresses" class="col-sm-2" style="float: left;">Targets</label>
+                                <div class="col-sm-10" style="float: left;">
+                                    <span class="help-block m-b-none">
+                                        Add the IP addresses or hostnames for your Internet-facing systems, each on a new line.
+                                    </span>
+                                    <div class="">
+                                        <textarea placeholder="For example:
+                                        www.intruder.io
+                                        35.189.67.245
+                                        35.189.67.245/28" rows="5" class="form-control m-t-sm"></textarea>
+                                    </div> <!----> <!---->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="target_addresses" class="col-sm-2" style="float: left;">Upload CSV File</label>
+                                <div class="col-sm-10" style="float: left;">
+                                    <span class="help-block m-b-none">
+                                        Alternatively, upload a text file containing your IP addresses and hostnames.
+                                        Separate each one with a comma.
+                                    </span>
+                                    <br><br>
+                                    <input type="file" class="m-t-sm">
+                                    <br style="clear:both;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-white">Cancel</button>
+                            <button disabled="disabled" type="submit" class="btn btn-primary">
+                                <strong>Add</strong>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+      {% block footer %}
+      {% include "footer.html" %}
+      {% endblock %}
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+
+
+
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+
+
+
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../static/js/sb-admin-2.min.js"></script>
+  <script src="../static/js/targets.js"></script>
+
+
+  {% endblock %}

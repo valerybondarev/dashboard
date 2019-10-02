@@ -1,0 +1,7 @@
+.pull-right{
+      float:right;
+    }
+    .pull-right .card-body {
+      font-size: 12px;
+      padding: 3px 7px;
+    }
